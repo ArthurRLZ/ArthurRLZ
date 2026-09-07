@@ -1,47 +1,227 @@
-<svg fill="none" viewBox="0 0 800 400" width="100%" height="100%" xmlns="http://w3.org">
-  <!-- 1. Define the Pattern and Styles -->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 800 400"
+  width="800"
+  height="400"
+>
   <defs>
-    <!-- Seamless Grid/Dot Pattern -->
-    <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="2" fill="#30363d" />
-    </pattern>
+    <!-- GitHub Dark -->
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="400">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
 
-    <!-- External Fonts and Custom CSS -->
-    <style>
-      @import url('https://googleapis.com');
+    <!-- Clip rounded card -->
+    <clipPath id="clip">
+      <rect width="800" height="400" rx="16"/>
+    </clipPath>
 
-      .card-body {
-        font-family: 'Inter', sans-serif;
-        color: #c9d1d9;
-        padding: 40px;
-        height: 100%;
-        box-sizing: border-box;
-      }
-
-      h1 {
-        color: #58a6ff;
-        font-size: 32px;
-        margin-bottom: 5px;
-        animation: fadeIn 1.5s ease-in-out;
-      }
-
-      /* Example CSS Animation */
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-    </style>
+    <!-- Subtle blue glow -->
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity=".08"/>
+      <stop offset=".5" stop-color="#58a6ff" stop-opacity=".025"/>
+      <stop offset="1" stop-color="#58a6ff" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <!-- 2. Apply Background Color and the SVG Pattern -->
-  <rect width="100%" height="100%" fill="#0d1117" rx="10" />
-  <rect width="100%" height="100%" fill="url(#dot-pattern)" rx="10" />
+  <!-- ========================================= -->
+  <!-- BACKGROUND                                -->
+  <!-- ========================================= -->
 
-  <!-- 3. Embed Rich HTML via foreignObject -->
-  <foreignObject x="0" y="0" width="800" height="400">
-    <div xmlns="http://w3.org" class="card-body">
-      <h1>Hi there, I'm a Developer! 👋</h1>
-      <p>This entire layout is styled using CSS grid, custom fonts, and animated patterns inside an SVG.</p>
-    </div>
-  </foreignObject>
+  <rect
+    width="800"
+    height="400"
+    rx="16"
+    fill="#0d1117"
+  />
+
+  <!-- ========================================= -->
+  <!-- RESONANCE FIELD                           -->
+  <!-- ========================================= -->
+
+  <g
+    clip-path="url(#clip)"
+    fill="none"
+    stroke="#8b949e"
+    stroke-width="0.8"
+    opacity="0.48"
+  >
+
+    <!-- Upper horizontal resonance -->
+    <path d="M0 55 C120 55 150 55 230 55 S360 55 450 55 S620 55 800 55"/>
+    <path d="M0 60 C120 60 150 60 230 60 S360 60 450 60 S620 60 800 60"/>
+    <path d="M0 65 C120 65 150 65 230 65 S360 65 450 65 S620 65 800 65"/>
+    <path d="M0 70 C120 70 150 70 230 70 S360 70 450 70 S620 70 800 70"/>
+    <path d="M0 75 C120 75 150 75 230 75 S360 75 450 75 S620 75 800 75"/>
+    <path d="M0 80 C120 80 150 80 230 80 S360 80 450 80 S620 80 800 80"/>
+
+    <!-- First wave field -->
+    <path d="M0 92 C90 65 120 125 200 100 S300 70 390 100 S520 130 620 90 S720 65 800 95"/>
+    <path d="M0 98 C90 70 120 132 200 106 S300 76 390 106 S520 136 620 96 S720 71 800 101"/>
+    <path d="M0 104 C90 75 120 139 200 112 S300 82 390 112 S520 142 620 102 S720 77 800 107"/>
+    <path d="M0 110 C90 80 120 146 200 118 S300 88 390 118 S520 148 620 108 S720 83 800 113"/>
+    <path d="M0 116 C90 85 120 153 200 124 S300 94 390 124 S520 154 620 114 S720 89 800 119"/>
+    <path d="M0 122 C90 90 120 160 200 130 S300 100 390 130 S520 160 620 120 S720 95 800 125"/>
+
+    <!-- Main resonance wave -->
+    <path d="M0 145 C80 110 110 190 190 145 S310 100 390 155 S500 205 590 145 S700 105 800 150"/>
+    <path d="M0 151 C80 116 110 196 190 151 S310 106 390 161 S500 211 590 151 S700 111 800 156"/>
+    <path d="M0 157 C80 122 110 202 190 157 S310 112 390 167 S500 217 590 157 S700 117 800 162"/>
+    <path d="M0 163 C80 128 110 208 190 163 S310 118 390 173 S500 223 590 163 S700 123 800 168"/>
+    <path d="M0 169 C80 134 110 214 190 169 S310 124 390 179 S500 229 590 169 S700 129 800 174"/>
+    <path d="M0 175 C80 140 110 220 190 175 S310 130 390 185 S500 235 590 175 S700 135 800 180"/>
+    <path d="M0 181 C80 146 110 226 190 181 S310 136 390 191 S500 241 590 181 S700 141 800 186"/>
+
+    <!-- Crossing wave family -->
+    <path d="M0 205 C100 185 140 230 220 205 S340 150 430 190 S560 245 650 205 S730 170 800 190"/>
+    <path d="M0 211 C100 191 140 236 220 211 S340 156 430 196 S560 251 650 211 S730 176 800 196"/>
+    <path d="M0 217 C100 197 140 242 220 217 S340 162 430 202 S560 257 650 217 S730 182 800 202"/>
+    <path d="M0 223 C100 203 140 248 220 223 S340 168 430 208 S560 263 650 223 S730 188 800 208"/>
+    <path d="M0 229 C100 209 140 254 220 229 S340 174 430 214 S560 269 650 229 S730 194 800 214"/>
+    <path d="M0 235 C100 215 140 260 220 235 S340 180 430 220 S560 275 650 235 S730 200 800 220"/>
+
+    <!-- Strong central interference -->
+    <path d="M0 260 C70 230 110 280 170 260 S250 215 320 260 S400 310 470 260 S560 210 630 260 S730 300 800 250"/>
+    <path d="M0 266 C70 236 110 286 170 266 S250 221 320 266 S400 316 470 266 S560 216 630 266 S730 306 800 256"/>
+    <path d="M0 272 C70 242 110 292 170 272 S250 227 320 272 S400 322 470 272 S560 222 630 272 S730 312 800 262"/>
+    <path d="M0 278 C70 248 110 298 170 278 S250 233 320 278 S400 328 470 278 S560 228 630 278 S730 318 800 268"/>
+    <path d="M0 284 C70 254 110 304 170 284 S250 239 320 284 S400 334 470 284 S560 234 630 284 S730 324 800 274"/>
+    <path d="M0 290 C70 260 110 310 170 290 S250 245 320 290 S400 340 470 290 S560 240 630 290 S730 330 800 280"/>
+
+    <!-- Lower resonance -->
+    <path d="M0 305 C100 280 140 330 240 305 S390 270 480 310 S620 345 800 300"/>
+    <path d="M0 311 C100 286 140 336 240 311 S390 276 480 316 S620 351 800 306"/>
+    <path d="M0 317 C100 292 140 342 240 317 S390 282 480 322 S620 357 800 312"/>
+    <path d="M0 323 C100 298 140 348 240 323 S390 288 480 328 S620 363 800 318"/>
+    <path d="M0 329 C100 304 140 354 240 329 S390 294 480 334 S620 369 800 324"/>
+    <path d="M0 335 C100 310 140 360 240 335 S390 300 480 340 S620 375 800 330"/>
+
+    <!-- Bottom horizontal field -->
+    <path d="M0 350 C130 350 170 350 280 350 S500 350 800 350"/>
+    <path d="M0 356 C130 356 170 356 280 356 S500 356 800 356"/>
+    <path d="M0 362 C130 362 170 362 280 362 S500 362 800 362"/>
+    <path d="M0 368 C130 368 170 368 280 368 S500 368 800 368"/>
+    <path d="M0 374 C130 374 170 374 280 374 S500 374 800 374"/>
+    <path d="M0 380 C130 380 170 380 280 380 S500 380 800 380"/>
+
+  </g>
+
+  <!-- ========================================= -->
+  <!-- SUBTLE GLOW                              -->
+  <!-- ========================================= -->
+
+  <circle
+    cx="620"
+    cy="190"
+    r="230"
+    fill="url(#glow)"
+  />
+
+  <!-- ========================================= -->
+  <!-- CARD BORDER                               -->
+  <!-- ========================================= -->
+
+  <rect
+    x="1"
+    y="1"
+    width="798"
+    height="398"
+    rx="15"
+    fill="none"
+    stroke="#30363d"
+    stroke-width="2"
+  />
+
+  <!-- ========================================= -->
+  <!-- TERMINAL BUTTONS                          -->
+  <!-- ========================================= -->
+
+  <circle cx="42" cy="38" r="6" fill="#ff7b72"/>
+  <circle cx="62" cy="38" r="6" fill="#d29922"/>
+  <circle cx="82" cy="38" r="6" fill="#3fb950"/>
+
+  <!-- ========================================= -->
+  <!-- CONTENT                                   -->
+  <!-- ========================================= -->
+
+  <text
+    x="40"
+    y="100"
+    fill="#58a6ff"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="31"
+    font-weight="700"
+  >
+    Bem vindo!
+  </text>
+
+  <text
+    x="40"
+    y="137"
+    fill="#c9d1d9"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="17"
+  >
+    Meu nome é Arthur Ricardo
+  </text>
+
+  <text
+    x="40"
+    y="163"
+    fill="#8b949e"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="15"
+  >
+    Sou desenvolvedor Full Stack
+  </text>
+
+  <!-- ========================================= -->
+  <!-- TERMINAL                                 -->
+  <!-- ========================================= -->
+
+  <rect
+    x="40"
+    y="195"
+    width="720"
+    height="125"
+    rx="12"
+    fill="#161b22"
+    fill-opacity=".94"
+    stroke="#30363d"
+  />
+
+  <circle cx="62" cy="217" r="5" fill="#ff7b72"/>
+  <circle cx="80" cy="217" r="5" fill="#d29922"/>
+  <circle cx="98" cy="217" r="5" fill="#3fb950"/>
+
+  <text
+    x="60"
+    y="255"
+    fill="#7ee787"
+    font-family="monospace"
+    font-size="15"
+  >
+    &gt; whoami
+  </text>
+
+  <text
+    x="60"
+    y="280"
+    fill="#c9d1d9"
+    font-family="monospace"
+    font-size="15"
+  >
+    ArthurRLZ@github:~$ coding...
+  </text>
+
+  <text
+    x="60"
+    y="305"
+    fill="#58a6ff"
+    font-family="monospace"
+    font-size="14"
+  >
+    status: ONLINE ●
+  </text>
+
 </svg>
