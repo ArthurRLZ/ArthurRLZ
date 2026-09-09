@@ -286,5 +286,11 @@
     <text x="598.0" y="361.6" fill="#A8B9CC"
       font-family="monospace" font-size="13" font-weight="600">C</text>
   </g>
-
+  <g>
+    <rect x="631.6" y="342" width="92.2" height="30" rx="15.0"
+      fill="#0d1117" fill-opacity="0.9" stroke="#A97BFF" stroke-width="1.1"/>
+    <circle cx="649.6" cy="357.0" r="4" fill="#A97BFF"/>
+    <text x="661.6" y="361.6" fill="#A97BFF"
+      font-family="monospace" font-size="13" font-weight="600">Kotlin</text>
+  </g>
 </svg>
